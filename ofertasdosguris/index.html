@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Oferta dos Guris | Só as brabas</title>
+<meta name="description" content="Oferta dos Guris: só as brabas do Mercado Livre, Amazon e Shopee. Achadinhos conferidos, todo dia no @ofertadosguris.">
+<meta property="og:title" content="Oferta dos Guris | Só as brabas">
+<meta property="og:description" content="Achadinhos do Mercado Livre, Amazon e Shopee. Só as brabas, todo dia.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0C0A09">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Mini site de link da bio do @ofertadosguris. Coluna única de até 520px, fundo preto e laranja da marca (cores da foto de perfil). A variável --lime guarda o laranja principal. */
+:root{
+  --bg:#0C0A09; --bg-2:#171310; --card:#1B1714; --line:#2F2721;
+  --lime:#FF7A0A; --lime-d:#B85500; --org:#FFB547; --shp:#EE4D2D;
+  --ink:#FFF8F2; --muted:#B5A99F;
+  --display:"Anton","Impact","Arial Narrow Bold",system-ui,sans-serif;
+  --body:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:520px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* TOPO */
+.hero{position:relative;overflow:hidden;
+  background:radial-gradient(110% 80% at 50% 0%,#3A2412 0%,var(--bg) 70%)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(-45deg,rgba(255,122,10,.06) 0 14px,transparent 14px 34px)}
+.hero .wrap{position:relative;padding-block:38px 34px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.badge{width:128px;height:128px;border-radius:50%;background:var(--bg-2) center/cover no-repeat;
+  box-shadow:0 0 0 4px var(--bg),0 0 0 8px var(--lime),0 18px 40px rgba(255,122,10,.35)}
+h1{font-family:var(--display);font-weight:400;font-size:52px;line-height:.95;margin:8px 0 0;text-transform:uppercase;letter-spacing:.5px}
+h1 span{color:var(--lime)}
+.tag{display:inline-block;font-family:var(--display);font-size:20px;letter-spacing:1px;text-transform:uppercase;
+  background:#fff;color:var(--bg);padding:2px 14px;border-radius:6px;transform:rotate(-2deg)}
+.pitch{margin:4px 0 0;max-width:34ch;font-size:16px;color:#D9DDE4;text-wrap:balance}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:2px 0 4px;padding:0;list-style:none}
+.stats li{border:1px solid var(--line);background:var(--bg-2);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;color:#D9DDE4}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:60px;padding:12px 20px;border-radius:16px;
+  background:var(--lime);color:var(--bg);text-decoration:none;font-family:var(--display);font-size:24px;letter-spacing:1px;text-transform:uppercase;
+  box-shadow:0 6px 0 var(--lime-d),0 14px 26px rgba(0,0,0,.4);transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--lime-d)}
+.btn svg{width:26px;height:26px;flex:none}
+.note{font-size:12.5px;color:var(--muted);margin:0}
+
+/* LINKS */
+.links{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.links a{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;font-weight:600;min-height:56px}
+.links a:hover{border-color:var(--lime)}
+.links .ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none;font-weight:800;font-size:14px}
+.links .sub{display:block;font-weight:500;font-size:12.5px;color:var(--muted)}
+.links .go{margin-left:auto;color:var(--lime);font-size:20px}
+
+section{padding-block:30px 6px}
+h2{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.05;margin:0 0 4px;text-transform:uppercase;letter-spacing:.5px}
+h2 em{font-style:normal;color:var(--lime)}
+.lead{margin:0 0 16px;color:var(--muted);font-size:14px}
+
+/* DESTAQUES */
+.chip{display:inline-block;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+.c-ml{background:#FFE600;color:#2D3277}
+.c-amz{background:#131A22;color:#fff;box-shadow:inset 0 -3px 0 #FF9900}
+.c-shp{background:var(--shp);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.prod{background:var(--card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
+.prod .ph{aspect-ratio:1/1;background:#fff center/contain no-repeat}
+.prod .bd{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.prod h3{font-size:13.5px;font-weight:600;line-height:1.3;margin:2px 0 6px}
+.prod .buy{margin-top:auto;display:block;text-align:center;background:var(--lime);color:var(--bg);text-decoration:none;font-weight:800;font-size:13px;border-radius:10px;padding:9px 8px}
+.prod .buy:hover{background:var(--org);color:var(--bg)}
+.sample{font-size:12px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:8px 10px;margin:0 0 12px}
+
+/* COMO FUNCIONA */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;counter-increment:s}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--lime);color:var(--bg);font-family:var(--display);font-size:22px;transform:rotate(-6deg)}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:13.5px}
+
+/* COMPARTILHAR */
+.share{background:var(--lime);color:var(--bg);border-radius:20px;padding:20px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px;text-align:center}
+.share h2{line-height:1.25}
+.share h2 em{color:var(--bg);background:#fff;padding:0 6px;border-radius:6px}
+.share p{margin:0;font-size:14px;font-weight:500}
+.copy{display:flex;gap:8px;min-width:0;background:rgba(12,10,9,.18);border-radius:12px;padding:6px 6px 6px 12px;align-items:center}
+.copy code{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--body);font-weight:600;font-size:14px;text-align:left;user-select:all}
+.copy button{border:0;background:var(--bg);color:var(--lime);font-family:var(--body);font-weight:700;font-size:14px;border-radius:9px;padding:9px 14px;cursor:pointer;flex:none;white-space:nowrap}
+
+footer{padding-block:30px 120px;text-align:center;color:var(--muted);font-size:12px}
+footer p{margin:4px 0}
+
+/* BOTÃO FIXO */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  background:linear-gradient(to top,var(--bg) 60%,transparent);transition:transform .25s ease}
+.sticky.off{transform:translateY(120%)}
+.sticky .btn{max-width:488px;margin:0 auto;min-height:54px;font-size:21px}
+
+a:focus-visible,button:focus-visible{outline:3px solid var(--org);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="badge" role="img" aria-label="Foto de perfil da Oferta dos Guris" style="background-image:url(img/logo.webp)"></div>
+    <h1>Oferta dos <span>Guris</span></h1>
+    <span class="tag">Só as brabas</span>
+    <p class="pitch">As melhores ofertas para os guris! Tech, ferramentas, estilo e casa do Mercado Livre, Amazon e Shopee.</p>
+    <ul class="stats">
+      <li>Promoções todo dia</li><li>Cupons</li><li>3 lojas</li>
+    </ul>
+    <a class="btn" id="cta-top" href="https://www.instagram.com/ofertadosguris/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3.1 0-4.1.1-1.1 0-1.8.2-2.4.5a4.9 4.9 0 0 0-1.8 1.2A4.9 4.9 0 0 0 2.6 5.5c-.3.6-.5 1.3-.5 2.4C2 8.9 2 9.3 2 12s0 3.1.1 4.1c0 1.1.2 1.8.5 2.4.3.7.6 1.2 1.2 1.8.6.5 1.1.9 1.8 1.2.6.3 1.3.4 2.4.5 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c1.1 0 1.8-.2 2.4-.5a4.9 4.9 0 0 0 1.8-1.2 4.9 4.9 0 0 0 1.2-1.8c.3-.6.4-1.3.5-2.4.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c0-1.1-.2-1.8-.5-2.4a4.9 4.9 0 0 0-1.2-1.8 4.9 4.9 0 0 0-1.8-1.2c-.6-.3-1.3-.4-2.4-.5C15.1 2 14.7 2 12 2Zm0 1.8c2.7 0 3 0 4 .1 1 0 1.5.2 1.8.3.5.2.8.4 1.2.8.4.4.6.7.8 1.2.1.3.3.8.3 1.8.1 1 .1 1.3.1 4s0 3-.1 4c0 1-.2 1.5-.3 1.8-.2.5-.4.8-.8 1.2-.4.4-.7.6-1.2.8-.3.1-.8.3-1.8.3-1 .1-1.3.1-4 .1s-3 0-4-.1c-1 0-1.5-.2-1.8-.3a3 3 0 0 1-1.2-.8 3 3 0 0 1-.8-1.2c-.1-.3-.3-.8-.3-1.8-.1-1-.1-1.3-.1-4s0-3 .1-4c0-1 .2-1.5.3-1.8.2-.5.4-.8.8-1.2.4-.4.7-.6 1.2-.8.3-.1.8-.3 1.8-.3 1-.1 1.3-.1 4-.1Z"/></svg>
+      Seguir @ofertadosguris
+    </a>
+    <p class="note">Ative as notificações para não perder nenhuma braba.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="t-links" style="padding-top:22px">
+    <h2 id="t-links" hidden>Nossos links</h2>
+    <ul class="links">
+      <li><a href="https://www.instagram.com/ofertadosguris/" target="_blank" rel="noopener"><span class="ico" style="background:#3A1F2E;color:#FF7AB0">IG</span><span>Instagram<span class="sub">@ofertadosguris</span></span><span class="go" aria-hidden="true">›</span></a></li>
+      <li><a href="https://www.mercadolivre.com.br/social/eliasroggia" target="_blank" rel="noopener"><span class="ico" style="background:#FFE600;color:#2D3277">ML</span><span>Brabas do Mercado Livre<span class="sub">Lista com os achadinhos do dia</span></span><span class="go" aria-hidden="true">›</span></a></li>
+      <li><a href="https://link.amazon/B0iaMxFS9" target="_blank" rel="noopener"><span class="ico" style="background:#131A22;color:#FF9900">a</span><span>Brabas da Amazon<span class="sub">Lista com os achadinhos do dia</span></span><span class="go" aria-hidden="true">›</span></a></li>
+      <li><a href="https://s.shopee.com.br/4LL2XY7GR3" target="_blank" rel="noopener"><span class="ico" style="background:var(--shp);color:#fff">S</span><span>Brabas da Shopee<span class="sub">Lista com os achadinhos do dia</span></span><span class="go" aria-hidden="true">›</span></a></li>
+    </ul>
+  </section>
+
+  <section id="ofertas" aria-labelledby="t-of">
+    <h2 id="t-of">As brabas da <em>semana</em></h2>
+    <p class="lead">Os achadinhos que mais bombaram.</p>
+    <p class="sample">Os preços mudam rápido. Toque no produto para ver o valor atualizado na loja.</p>
+    <div class="grid">
+      <article class="prod"><div class="ph" role="img" aria-label="Smart TV TCL 65 polegadas" style="background-image:url(img/p1.webp)"></div><div class="bd"><span class="chip c-ml">Mercado Livre</span><h3>Smart TV TCL 65" QLED 4K</h3><a class="buy" href="https://meli.la/2VYAY4z" target="_blank" rel="noopener">Ver preço na loja</a></div></article>
+      <article class="prod"><div class="ph" role="img" aria-label="PlayStation 5 Slim" style="background-image:url(img/p2.webp)"></div><div class="bd"><span class="chip c-amz">Amazon</span><h3>PS5 Slim Digital + 2 jogos</h3><a class="buy" href="https://link.amazon/B0hcNFUdh" target="_blank" rel="noopener">Ver preço na loja</a></div></article>
+      <article class="prod"><div class="ph" role="img" aria-label="Geladeira Multidoor" style="background-image:url(img/p3.webp)"></div><div class="bd"><span class="chip c-shp">Shopee</span><h3>Geladeira Multidoor 426 L Inverter</h3><a class="buy" href="https://s.shopee.com.br/3qOa48k8Hu" target="_blank" rel="noopener">Ver preço na loja</a></div></article>
+      <article class="prod"><div class="ph" role="img" aria-label="Apple iPhone 15" style="background-image:url(img/p4.webp)"></div><div class="bd"><span class="chip c-amz">Amazon</span><h3>iPhone 15 (128 GB) Azul</h3><a class="buy" href="https://link.amazon/B0h7vvhyg" target="_blank" rel="noopener">Ver preço na loja</a></div></article>
+      <article class="prod"><div class="ph" role="img" aria-label="Monitor Samsung Odyssey G5" style="background-image:url(img/p5.webp)"></div><div class="bd"><span class="chip c-ml">Mercado Livre</span><h3>Monitor Samsung Odyssey G5 34"</h3><a class="buy" href="https://meli.la/24rpAod" target="_blank" rel="noopener">Ver preço na loja</a></div></article>
+      <article class="prod"><div class="ph" role="img" aria-label="Smart TV AOC 50 polegadas" style="background-image:url(img/p6.webp)"></div><div class="bd"><span class="chip c-shp">Shopee</span><h3>Smart TV AOC 50" 4K Roku</h3><a class="buy" href="https://s.shopee.com.br/20wvtxnCqI" target="_blank" rel="noopener">Ver preço na loja</a></div></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-como">
+    <h2 id="t-como">Como <em>funciona</em></h2>
+    <p class="lead">Três passos para pegar as brabas.</p>
+    <ol class="steps">
+      <li><div><b>Siga o @ofertadosguris</b><span>E ative as notificações dos posts e stories.</span></div></li>
+      <li><div><b>A gente garimpa</b><span>Postamos só o que vale a pena, com o preço conferido na hora.</span></div></li>
+      <li><div><b>Compre pelo nosso link</b><span>Você paga o mesmo preço e ainda fortalece o perfil.</span></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="t-share">
+    <div class="share">
+      <h2 id="t-share">Marca o guri que <em>precisa</em> ver isso</h2>
+      <p>Manda o perfil pros amigos que vivem caçando promoção.</p>
+      <div class="copy"><code id="share-url">instagram.com/ofertadosguris</code><button type="button" id="copy-btn">Copiar link</button></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Preços e disponibilidade podem sofrer alterações sem aviso prévio.</p>
+  <p>Comprando pelo nosso link, podemos receber uma comissão sem custo adicional para você.</p>
+  <p style="margin-top:12px;font-weight:600;color:var(--ink)">© Oferta dos Guris · @ofertadosguris</p>
+</footer>
+
+<div class="sticky off" id="sticky"><a class="btn" href="https://www.instagram.com/ofertadosguris/" target="_blank" rel="noopener">Seguir @ofertadosguris</a></div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-btn'), code=document.getElementById('share-url');
+  btn.addEventListener('click',function(){
+    var t='https://'+code.textContent.trim();
+    function selectIt(){var r=document.createRange();r.selectNodeContents(code);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selecionado';}
+    try{navigator.clipboard.writeText(t).then(function(){btn.textContent='Copiado!';setTimeout(function(){btn.textContent='Copiar link'},1800)},selectIt)}catch(e){selectIt()}
+  });
+  var top=document.getElementById('cta-top'), st=document.getElementById('sticky');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){st.classList.toggle('off',e[0].isIntersecting)}).observe(top);
+  } else { st.classList.remove('off'); }
+})();
+</script>
+</body>
+</html>
