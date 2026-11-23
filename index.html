@@ -100,12 +100,12 @@ h2 em{font-style:normal;color:var(--blue)}
 .steps span{color:var(--muted);font-size:13.5px}
 
 /* COMPARTILHAR */
-.share{background:var(--navy);color:#fff;border-radius:20px;padding:20px;display:grid;gap:12px;text-align:center}
+.share{background:var(--navy);color:#fff;border-radius:20px;padding:20px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px;text-align:center}
 .share h2{color:#fff}.share h2 em{color:var(--yel)}
 .share p{margin:0;opacity:.85;font-size:14px}
-.copy{display:flex;gap:8px;background:rgba(255,255,255,.1);border-radius:12px;padding:6px 6px 6px 12px;align-items:center}
+.copy{display:flex;gap:8px;min-width:0;background:rgba(255,255,255,.1);border-radius:12px;padding:6px 6px 6px 12px;align-items:center}
 .copy code{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--body);font-size:14px;text-align:left;user-select:all}
-.copy button{border:0;background:var(--yel);color:var(--navy);font-family:var(--body);font-weight:700;font-size:14px;border-radius:9px;padding:9px 14px;cursor:pointer}
+.copy button{border:0;background:var(--yel);color:var(--navy);font-family:var(--body);font-weight:700;font-size:14px;border-radius:9px;padding:9px 14px;cursor:pointer;flex:none;white-space:nowrap}
 
 footer{padding-block:28px 120px;text-align:center;color:var(--muted);font-size:12px}
 footer p{margin:4px 0}
